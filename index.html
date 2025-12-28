@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family New Year 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f0c29;
+            --accent-color: #ffd700; /* Золотой свет */
+            --glass-bg: rgba(45, 15, 85, 0.4);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle at 50% 50%, #1a1a40 0%, #0f0c29 100%);
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Мягкие световые пятна */
+        .light-blob {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            filter: blur(80px);
+            z-index: -1;
+            pointer-events: none;
+            border-radius: 50%;
+        }
+
+        /* Снежинки */
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            color: #fff;
+            user-select: none;
+            z-index: 1000;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+        @keyframes fall { to { transform: translateY(105vh) rotate(360deg); } }
+
+        header {
+            text-align: center;
+            padding: 100px 20px 60px 20px;
+        }
+
+        h1 {
+            font-weight: 900;
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin: 0;
+            background: linear-gradient(to right, #fff, var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
+        }
+
+        .subtitle {
+            font-weight: 300;
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+
+        /* Лента */
+        .timeline {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            position: relative;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, var(--accent-color), transparent);
+            top: 0; bottom: 0; left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 15px var(--accent-color);
+        }
+
+        .item {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 100px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Карточка */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 25px;
+            padding: 40px;
+            width: 420px;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            text-align: center; /* Центрируем текст внутри */
+        }
+
+        .glass-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            border-color: var(--accent-color);
+            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.2);
+        }
+
+        .glass-card h2 {
+            font-size: 3rem;
+            margin: 0;
+            font-weight: 900;
+            color: var(--accent-color);
+            text-transform: uppercase;
+        }
+
+        .glass-card p {
+            font-weight: 300;
+            font-size: 1.1rem;
+            margin: 20px 0;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .btn-more {
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            letter-spacing: 2px;
+        }
+
+        /* НОВЫЙ БЛОК ПРЕДСКАЗАНИЙ В ТОМ ЖЕ СТИЛЕ */
+        .wishes-section {
+            max-width: 600px;
+            margin: 0 auto 100px;
+            padding: 0 20px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .wish-btn {
+            background: var(--accent-color);
+            color: #0f0c29;
+            border: none;
+            padding: 15px 40px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+            letter-spacing: 1px;
+        }
+
+        .wish-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+        }
+
+        #wish-text {
+            margin-top: 30px;
+            font-size: 1.3rem;
+            font-weight: 300;
+            min-height: 50px;
+            line-height: 1.6;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .left { justify-content: flex-start; }
+        .right { justify-content: flex-end; }
+
+        @media (max-width: 768px) {
+            .timeline::after { left: 20px; }
+            .item { justify-content: flex-start; padding-left: 50px; }
+            .glass-card { width: 100%; }
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="light-blob" style="top: 10%; left: 10%; background: rgba(255, 215, 0, 0.1);"></div>
+    <div class="light-blob" style="bottom: 20%; right: 10%; background: rgba(123, 31, 162, 0.2);"></div>
+
+    <header>
+        <h1>NEW YEAR 2025</h1>
+        <p class="subtitle">СЕМЕЙНЫЙ АЛЬБОМ ВОСПОМИНАНИЙ</p>
+    </header>
+
+    <div class="timeline" id="timeline">
+        
+        <div class="item left">
+            <a href="old.html" class="glass-card">
+                <h2>Тогда</h2>
+                <p>Ваши первые шаги вместе, молодость и те самые моменты, с которых всё началось.</p>
+                <span class="btn-more">Смотреть архив →</span>
+            </a>
+        </div>
+
+        <div class="item right">
+            <a href="new.html" class="glass-card">
+                <h2>Сейчас</h2>
+                <p>Наши дни, полные тепла и новых приключений. Всё, что мы любим сегодня.</p>
+                <span class="btn-more">Наши дни →</span>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="wishes-section">
+        <div class="glass-card" style="width: 100%; margin: 0 auto;">
+            <h2 style="font-size: 2rem; margin-bottom: 20px;">Магия 2025</h2>
+            <button class="wish-btn" onclick="generateWish()">Узнать предсказание</button>
+            <div id="wish-text"></div>
+        </div>
+    </div>
+
+    <script>
+        // Снег (пушистый)
+        function createSnowflake() {
+            const snow = document.createElement('div');
+            snow.classList.add('snowflake');
+            snow.innerHTML = '●';
+            snow.style.left = Math.random() * 100 + 'vw';
+            snow.style.opacity = Math.random();
+            snow.style.fontSize = Math.random() * 10 + 5 + 'px';
+            snow.style.animationDuration = Math.random() * 5 + 5 + 's';
+            document.body.appendChild(snow);
+            setTimeout(() => snow.remove(), 10000);
+        }
+        setInterval(createSnowflake, 150);
+
+        // Список предсказаний
+        const wishes = [
+            "Вас ждёт невероятно счастливое путешествие всей семьей!",
+            "В 2025 году в вашем доме будет ещё больше смеха и уюта!",
+            "Вас ждёт удача в продаже квартиры! Всё сложится наилучшим образом.",
+            "Здоровье всех близких будет самым крепким!",
+        ];
+
+        function generateWish() {
+            const textElement = document.getElementById('wish-text');
+            const randomWish = wishes[Math.floor(Math.random() * wishes.length)];
+            
+            // Плавная смена текста
+            textElement.style.opacity = 0;
+            setTimeout(() => {
+                textElement.innerText = "✨ " + randomWish + " ✨";
+                textElement.style.transition = "1s";
+                textElement.style.opacity = 1;
+            }, 200);
+        }
+
+        // Покачивание камеры (Параллакс)
+        document.addEventListener('mousemove', (e) => {
+            const moveX = (e.clientX - window.innerWidth / 2) * 0.015;
+            const moveY = (e.clientY - window.innerHeight / 2) * 0.015;
+            document.getElementById('timeline').style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+    </script>
+</body>
+</html>
