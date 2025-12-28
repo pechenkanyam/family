@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сейчас — Наши дни</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f0c29;
+            --accent-color: #ffd700;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+        body { 
+            margin: 0; padding: 0; 
+            background: radial-gradient(circle at 50% 50%, #1a1a40 0%, #0f0c29 100%); 
+            font-family: 'Montserrat', sans-serif; 
+            color: #fff; 
+            min-height: 100vh;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 50px 20px; }
+        .back-btn { 
+            display: inline-block; text-decoration: none; color: var(--accent-color); 
+            font-weight: 700; border: 1px solid var(--accent-color); 
+            padding: 10px 25px; border-radius: 50px; transition: 0.3s; 
+            margin-bottom: 40px; text-transform: uppercase; font-size: 0.8rem;
+        }
+        .back-btn:hover { background: var(--accent-color); color: #0f0c29; transform: scale(1.05); }
+        
+        h1 { font-weight: 900; font-size: 3rem; text-transform: uppercase; color: var(--accent-color); margin-bottom: 40px; text-align: center; letter-spacing: 2px; }
+
+        /* Умная сетка без обрезки фото */
+        .grid { 
+            columns: 3 300px;
+            column-gap: 20px;
+        }
+
+        .card { 
+            break-inside: avoid;
+            background: var(--glass-bg); 
+            backdrop-filter: blur(15px); 
+            border: 1px solid var(--glass-border); 
+            border-radius: 20px; 
+            padding: 12px; 
+            margin-bottom: 20px;
+            transition: 0.3s;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .card:hover { border-color: var(--accent-color); transform: translateY(-5px); }
+        
+        .card img { 
+            width: 100%; 
+            height: auto; 
+            border-radius: 15px; 
+            display: block; 
+        }
+
+        .caption { 
+            padding: 15px 5px 5px;
+            font-size: 0.95rem; 
+            font-weight: 300; 
+            line-height: 1.4; 
+            opacity: 0.9;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .grid { columns: 1; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">← НА ГЛАВНУЮ</a>
+        <h1>НАШИ ДНИ</h1>
+
+        <div class="grid">
+            <div class="card">
+                <img src="img/ekb_football.jpg" alt="Футбол Екб">
+                <div class="caption">Главный болельщик в деле. Папа на футболе в Екатерингбурге — Мини-отпуск!</div>
+            </div>
+
+            <div class="card">
+                <img src="img/corp_2023.jpg" alt="Корпоратив">
+                <div class="caption">Самая прекрасная на празднике — Корпоратив перед наступающим 2023 годом</div>
+            </div>
+
+            <div class="card">
+                <img src="img/mom_dad_bday.jpg" alt="Родители">
+                <div class="caption">Семья на дне рождении мамы!</div>
+            </div>
+
+            <div class="card">
+                <img src="img/friends.jpg" alt="Отдых">
+                <div class="caption">Ваши тёплые дни, вместе с компанией друзей. Природный отдых</div>
+            </div>
+
+            <div class="card">
+                <img src="img/quadro.jpg" alt="Квадроциклы">
+                <div class="caption">Немного экстрима в нашей жизни. Гонки на квадроциклах</div>
+            </div>
+
+            <div class="card">
+                <img src="img/tattoo.jpg" alt="Эскиз тату">
+                <div class="caption">Зарождение вашей татуировки — Идеальный эскиз</div>
+            </div>
+
+            <div class="card">
+                <img src="img/20_years.jpg" alt="Юбилей">
+                <div class="caption">Двадцать лет рука об руку. Глядя на вас, я понимаю, что такое настоящая любовь и верность. Дальше — больше</div>
+            </div>
+
+            <div class="card">
+                <img src="img/egypt.jpg" alt="Египет">
+                <div class="caption">Жаркое солнце, море и наш незабываемый отдых. Египет надолго остался в памяти, удивив прекрасными подводными красотами</div>
+            </div>
+
+            <div class="card">
+                <img src="img/thailand.jpg" alt="Таиланд">
+                <div class="caption">Тайские Каникулы, прошедшие совсем недавно. Пусть таких путешествий в нашей жизни будет всё больше</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
